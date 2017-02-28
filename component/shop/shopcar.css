@@ -1,0 +1,208 @@
+#main>.car-main {
+	position: absolute;
+	top: 0;
+	width: 100%;
+	padding-top: 4rem;
+	padding-bottom: 9rem;
+}
+
+#main>.car-main>h1 {
+	width: 100%;
+	height: 4.3rem;
+	background-color: #f9fafd;
+	border: 0.1rem solid #e0e0e0;
+	text-align: center;
+	border-right: none;
+	border-left: none;
+	line-height: 4.3rem;
+	font-size: 1.6rem;
+	position: fixed;
+	top: 0;
+	z-index: 1000;
+}
+
+.info:before {
+	content: "";
+	display: block;
+	width: 100%;
+	height: 1rem;
+	background: #efefef;
+}
+
+.info>table tr {
+	height: 5rem;
+}
+
+.info>table tr:first-of-type {
+	font-size: 1rem;
+	position: relative;
+	vertical-align: top;
+}
+
+.info>table tr:first-of-type>td:first-child {
+	padding-top: 0.5rem;
+	padding-left: 1rem;
+}
+
+.info>table tr:first-of-type>td>span:before {
+	content: "";
+	display: inline-block;
+	width: 0.4rem;
+	height: 1.3rem;
+	background: #ffd600;
+	border-radius: 20%;
+	margin-right: 0.5rem;
+	position: relative;
+	top: 0.2rem;
+}
+
+.info>table tr .ps {
+	position: absolute;
+	left: .9rem;
+	top: 16rem;
+	font-size: 1rem;
+	color: #999;
+}
+
+.info>table tr .cd {
+	position: absolute;
+	right: 1.3rem;
+	top: 13rem;
+	color: #e64f1a;
+	width: 6rem;
+	text-align: center;
+	height: 2.2rem;
+	line-height: 2.2rem;
+	border-radius: 1.1rem;
+	border-width: 1px;
+	border-style: solid;
+}
+
+.info>table tr:nth-of-type(2)>td,
+.info>table tr:nth-of-type(3)>td {
+	font-size: 1.1rem;
+}
+
+.info>table tr td input {
+	padding-left: 0.5rem;
+	width: 90%;
+	height: 3.2rem;
+	border-radius: 0.5rem;
+	border: solid 1px #cecece;
+}
+
+.car-list {
+	width: 100%;
+}
+
+.car-list>ul {
+	width: 100%;
+}
+
+.car-list>ul>li {
+	width: 100%;
+	display: flex;
+	position: relative;
+	align-items: center;
+	border-top: 0.1rem solid #e0e0e0;
+	padding: 0.5rem;
+}
+
+.car-list>ul>li>.car-check,
+.car-sum .car-check {
+	width: 10%;
+	text-align: center;
+	color: #f8cc0b;
+	font-size: 2rem;
+}
+
+.car-list>ul>li>.car-img {
+	width: 20%;
+}
+.car-list .car-product{
+	height:7.84rem;
+	padding-top:1rem;
+	font-size: 1.2rem;
+}
+.car-list .car-product .car-product-name{
+	margin-bottom:2.5rem;
+}
+.car-list .product-operation{
+	position: absolute;
+	right: 2rem;
+}
+.car-list>ul>li>.car-txt {
+	width: 70%;
+	font-size: 1.6rem;
+	line-height: 3.5rem;
+	font-family: "Myriad Set Pro", "Lucida Grande", "Helvetica Neue", Helvetica, Arial, Verdana, sans-serif, 'Microsoft Yahei', Simsun;
+}
+
+.car-list>ul>li>.car-btn {
+	position: absolute;
+	right: 1rem;
+	bottom: 1rem;
+	font-size: 1.4rem;
+	color: #f40;
+}
+
+.car-list>ul>li>div>img {
+	width: 100%;
+}
+
+.car-address {
+	border: 0.4rem solid transparent;
+	border-image: url(../img/下载.png) repeat;
+	border-image-slice: 14 2 5 14;
+	margin-top: 0.2rem;
+}
+
+.car-address table tr td {
+	padding: .4rem 1rem .3rem 1.4rem;
+	font-size: 1rem;
+}
+
+.car-list>ul>li>.product-operation .em {
+	display: inline-block;
+	width: 2.5rem;
+	height: 2.5rem;
+	border: 0.1rem solid #f40;
+	border-radius: 50%;
+	text-align: center;
+	line-height: 2.5rem;
+	background: #fff;
+}
+
+.car-list>ul>li>.product-operation .txt {
+	display: inline-block;
+	width: 2.2rem;
+	text-align: center;
+	color: #000;
+}
+
+.car-sum {
+	width: 100%;
+	height: 5rem;
+	display: flex;
+	align-items: center;
+	font-size: 1.6rem;
+	border-top: 0.1rem solid #e0e0e0;
+}
+
+.car-sum .car-all {
+	text-align: left;
+	width: 60%;
+}
+
+.car-sum .car-all span {
+	color: #e64f1a;
+	font-family: "Myriad Set Pro", "Lucida Grande", "Helvetica Neue", Helvetica, Arial, Verdana, sans-serif, 'Microsoft Yahei', Simsun;
+}
+
+.car-sum .car-end {
+	width: 30%;
+	text-align: center;
+	height: 100%;
+	background: #ffd600;
+	line-height: 5rem;
+}

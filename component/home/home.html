@@ -1,0 +1,73 @@
+
+		<!--首页-->
+		<div class="home">
+			<!--头部-->
+			<header class="pub-header">
+				<div class="header-content">北京市公安局朝阳分局将台派出所 12-8-819</span></div>
+				<span class="fa fa-search tap-action">搜&nbsp;索&nbsp;</span>
+			</header>
+			<!--轮播-->
+			<div class="swiper-container">
+				<div class="swiper-wrapper">
+					<div class="swiper-slide"><img lazy-src="img/home/2016123018095858.jpg@90Q.jpg"/></div>
+					<div class="swiper-slide"><img lazy-src="img/home/2017021612114225.jpg@90Q.jpg"/></div>
+					<div class="swiper-slide"><img lazy-src="img/home/201702161701026.jpg@90Q.jpg"/></div>
+				</div>
+				<!-- 如果需要分页器 -->
+				<div class="swiper-pagination"></div>
+			
+				<!-- 如果需要滚动条 -->
+				<div class="swiper-scrollbar"></div>
+			</div>
+			<!--main-->
+			<div class="main">
+				<!--活动图标-->
+				<div class="act-icon">
+					<ul class="act-icon-ul">
+						<li ng-repeat="(i,obj) in getActIcon "><img lazy-src="{{obj.activity.img}}"/><p>{{obj.activity.name}}</p></li>
+					</ul>
+				</div>
+				<!--活动商标-->
+				<div class="act-brand">
+					<ul class="act-brand-ul">
+						<li ng-repeat='(i,obj) in getActBrand | limitTo:3'><img lazy-src="{{obj.activity.img}}"/></li>
+					</ul>
+				</div>
+				<!--送货到家-->
+				<div class="home-business">
+					<div class="business-header" >
+							<img  lazy-src="{{business}}"/>	
+					</div>
+					<div class="business-cactivity">
+						<img ng-repeat="obj in activity" lazy-src="{{obj.cactivity_detail.img}}"/>
+					</div>
+					<div class="business-cicons">
+						<img ng-repeat="obj in cicons" lazy-src="{{obj.cicons_detail.img}}"/>
+					</div>
+					<div class="business-cscene">
+						<img ng-repeat="obj in cscene" lazy-src="{{obj.activity.img}}"/>
+					</div>
+				</div>
+				<!--活动种类-->
+				<div class="act-category">
+					<div class="category-section" ng-repeat="obj in getActCategory">
+						<div class="categroy-header">
+							{{obj.category_detail.name}}
+						</div>
+						<img lazy-src="{{obj.activity.img}}"/>
+						<ul class="categroy-goods">
+							<li ng-repeat="good in obj.category_detail.goods">
+								<img lazy-src="{{good.img}}"/>
+								<p>{{good.name}}</p>
+								<div class="goods-price">
+								<span class="currentPrice">￥+{{good.price}}</span>
+								<span class="oldPrice">￥+{{good.market_price}}</span>
+								<span class="addGood">+</span>
+								</div>
+							</li>
+						</ul>
+					</div>
+				</div>
+			</div>
+		</div>
+	

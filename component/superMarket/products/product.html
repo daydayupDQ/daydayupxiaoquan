@@ -1,0 +1,12 @@
+<div class="contentPro product-main">
+	<img src="{{getItem.img}}"/>
+	<div class="contentDrec">
+	<p>{{getItem.name}}</p>
+	<p>{{getItem.longName}}</p>
+	</div>
+	<div class="contentPrice">
+		<p>{{getItem.currentPrice}}</p>
+		<p ng-if="getItem.currentPrice!=getItem.marketPrice/1">{{getItem.marketPrice}}</p>
+	</div>
+	
+</div>

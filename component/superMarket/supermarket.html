@@ -1,0 +1,80 @@
+<div class="supermarket">
+	<!--头部-->
+	<header class="pub-header">
+		<div class="header-content">北京市公安局朝阳分局将台派出所 12-8-819</span></div>
+		<span class="fa fa-search tap-action">搜&nbsp;索&nbsp;</span>
+	</header>
+	<!--主要内容-->
+	<div class="main">
+		<!--种类行-->
+		<div class="categories-wrap">
+			<ul class="category" >
+				<li ng-repeat="obj in getCategories" ng-click="change(obj.id,obj.cids)">{{obj.name}}</li>
+			</ul>
+		</div>
+		<!--产品行-->
+		<div class="product-wrap" >
+			<!--排序内容-->
+			<div class="sort-content" ng-show=flag >
+				<ul>
+					<li ng-click="[sortFun(0),flag=false]">综合排序</li>
+					<li ng-click="[sortFun(1),flag=false]">销量最高</li>
+					<li ng-click="[sortFun(2),flag=false]">价格最低</li>
+					<li ng-click="[sortFun(3),flag=false]">价格最高</li>
+				</ul>
+			</div>
+			<!--商品细致分类-->
+			<div class="goods-category" ng-show="CategoryFlag">
+				<ul class="goods-category-ul">
+					<li ng-repeat="cid in cids" ng-click="[CategoryFlag=false,setCategoryId(cid.id)]">{{cid.name}}</li>
+				</ul>
+			</div>
+			<!--商品分类&&排序-->
+			<div class="product-tiltle">
+				<ul>
+					<li class="filter-sub" ng-click='[CategoryFlag=!CategoryFlag,flag=false]'>全部分类</li>
+					<li class="filter-sort" ng-click="[flag=!flag,CategoryFlag=false]">综合排序</li>
+					
+				</ul>
+			</div>
+			<!--产品项目-->
+			<div class="product-items">
+					<div class="cover-content" ng-show='flag||CategoryFlag'>
+					
+					</div>
+				<ul class="product-section">
+				
+					<li class="filter-holder"></li>
+					<li class="product-item" ng-repeat="obj in getSpecialPrice | filter:getCids" >
+						<a class="jumpBut" href="#/product" ng-click="setLocal(obj)">
+							<img class="product-img" src="{{obj.img}}"/>
+							<div class="product-meta-wrap">
+								<div class="prodcut-name">
+									{{obj.name}}
+								</div>
+								<div class="product-weight">
+									{{obj.long_name}}
+								</div>
+								<div class="product-price">
+									<span class="currentPrice">￥{{obj.price}}</span>
+									<span class="marketPrice" ng-if="obj.partner_price!=obj.price/1">￥{{obj.market_price}}</span>
+								</div>
+							</div>
+						</a>
+						<div class="product-operation">
+								<span class="product-del" ng-click="reduceFood($event)">
+									-
+								</span>
+								<span class="product-number">
+									0
+								</span>
+								<span class="product-add" ng-click="addFood($event)">
+									+
+								</span>
+						</div>
+					</li>
+				</ul>
+			</div>
+		</div>
+	</div>
+</div>
